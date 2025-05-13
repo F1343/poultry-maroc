@@ -3,121 +3,108 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>طيور المغرب</title>
   <style>
     body {
-      font-family: Tahoma, sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Tahoma', sans-serif;
+      background: #f8f8f8;
       margin: 0;
       padding: 0;
+      direction: rtl;
     }
     header {
-      background-color: #2e7d32;
+      background: #2c7a4b;
       color: white;
-      padding: 1rem;
+      padding: 15px;
       text-align: center;
+      font-size: 1.5rem;
     }
-    nav {
-      background-color: #4caf50;
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    .container {
+      padding: 20px;
     }
-    nav button {
-      background-color: white;
-      color: #2e7d32;
-      border: 1px solid #2e7d32;
-      border-radius: 5px;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-    }
-    .ads {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      padding: 1rem;
-    }
-    .ad {
-      border: 1px solid #ddd;
-      background-color: white;
-      padding: 1rem;
+    .card {
+      background: white;
       border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card-content h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #2c7a4b;
+    }
+    .card-content p {
+      margin: 5px 0;
+      color: #444;
     }
     footer {
-      background-color: #2e7d32;
+      background: #2c7a4b;
       color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      padding: 10px;
     }
-    .login {
-      max-width: 400px;
-      margin: 2rem auto;
-      background: white;
-      padding: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-    }
-    .login input {
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      font-size: 1rem;
-    }
-    .login button {
-      width: 100%;
-      padding: 0.5rem;
-      background: #2e7d32;
+    .btn {
+      background: #1f9d55;
       color: white;
-      font-size: 1rem;
-      border: none;
+      padding: 10px;
+      text-align: center;
       border-radius: 5px;
+      margin-top: 10px;
+      display: inline-block;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🐓 طيور المغرب</h1>
-    <p>بيع وشراء الدجاج، الطيور، السلالات، البيض، الأعلاف...</p>
-  </header>
+  <header>مرحبا بك في طيور المغرب</header>
+  <div class="container">
 
-  <section class="login">
-    <h2>تسجيل الدخول</h2>
-    <input type="text" placeholder="البريد الإلكتروني أو رقم الهاتف">
-    <input type="password" placeholder="كلمة المرور">
-    <button onclick="alert('تم تسجيل الدخول')">تسجيل الدخول</button>
-  </section>
-
-  <nav>
-    <button>الكل</button>
-    <button>دجاج بلدي</button>
-    <button>دجاج رومي</button>
-    <button>بياض</button>
-    <button>أرانب</button>
-    <button>حمام</button>
-    <button>كناري</button>
-  </nav>
-
-  <section class="ads">
-    <div class="ad">
-      <h3>دجاج بلدي للبيع</h3>
-      <p>السن: 3 أشهر</p>
-      <p>الثمن: 120 درهم</p>
-      <button>تواصل مع البائع</button>
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Chickens_in_Tanzania.jpg/640px-Chickens_in_Tanzania.jpg" alt="دجاجة بلدية">
+      <div class="card-content">
+        <h3>دجاجة بلدية حية</h3>
+        <p>السعر: 90 درهم</p>
+        <p>المدينة: الدار البيضاء</p>
+        <a href="#" class="btn">طلب الشراء</a>
+      </div>
     </div>
-    <div class="ad">
-      <h3>بيض للتفريخ</h3>
-      <p>30 بيضة طازجة</p>
-      <p>السعر: 90 درهم</p>
-      <button>تواصل مع البائع</button>
-    </div>
-  </section>
 
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Chicken_eggs_%28white_and_brown%29.jpg/640px-Chicken_eggs_%28white_and_brown%29.jpg" alt="بيض بلدي">
+      <div class="card-content">
+        <h3>بيض بلدي طازج</h3>
+        <p>السعر: 20 درهم</p>
+        <p>المدينة: مراكش</p>
+        <a href="#" class="btn">عرض معلومات البائع</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Yellow_canary_bird.jpg/640px-Yellow_canary_bird.jpg" alt="طائر كناري">
+      <div class="card-content">
+        <h3>كناري مغرد</h3>
+        <p>السعر: 120 درهم</p>
+        <p>المدينة: طنجة</p>
+        <a href="#" class="btn">تواصل مع البائع</a>
+      </div>
+    </div>
+
+  </div>
   <footer>
-    <p>&copy; 2025 طيور المغرب - جميع الحقوق محفوظة</p>
+    &copy; 2025 طيور المغرب. جميع الحقوق محفوظة.
   </footer>
 </body>
 </html>
