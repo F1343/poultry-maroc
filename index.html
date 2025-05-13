@@ -1,95 +1,123 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>طيور المغرب</title>
   <style>
     body {
       font-family: Tahoma, sans-serif;
-      direction: rtl;
-      text-align: right;
-      padding: 20px;
-      background-color: #f8f8f8;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
     }
-
     header {
       background-color: #2e7d32;
       color: white;
-      padding: 15px;
-      border-radius: 10px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 26px;
-    }
-
-    .section {
-      margin-top: 30px;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-    }
-
-    .categories {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    .category {
-      background-color: #e8f5e9;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .lang-switch {
-      margin-top: 10px;
-      float: left;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #555;
+      padding: 1rem;
       text-align: center;
+    }
+    nav {
+      background-color: #4caf50;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    nav button {
+      background-color: white;
+      color: #2e7d32;
+      border: 1px solid #2e7d32;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+    .ads {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+    .ad {
+      border: 1px solid #ddd;
+      background-color: white;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .login {
+      max-width: 400px;
+      margin: 2rem auto;
+      background: white;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+    .login input {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+    .login button {
+      width: 100%;
+      padding: 0.5rem;
+      background: #2e7d32;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>🐔 مرحباً بك في موقع طيور المغرب</h1>
-    <div class="lang-switch">
-      🌐
-      <a href="?lang=fr">Fr</a> |
-      <a href="?lang=en">EN</a>
-    </div>
+    <h1>🐓 طيور المغرب</h1>
+    <p>بيع وشراء الدجاج، الطيور، السلالات، البيض، الأعلاف...</p>
   </header>
 
-  <div class="section">
-    <h2>الأصناف</h2>
-    <div class="categories">
-      <div class="category">🐓 دجاج بلدي</div>
-      <div class="category">🥚 بيض</div>
-      <div class="category">🕊️ حمام</div>
-      <div class="category">🐥 صيصان</div>
-      <div class="category">🦆 بط</div>
-      <div class="category">🐇 أرانب</div>
-    </div>
-  </div>
+  <section class="login">
+    <h2>تسجيل الدخول</h2>
+    <input type="text" placeholder="البريد الإلكتروني أو رقم الهاتف">
+    <input type="password" placeholder="كلمة المرور">
+    <button onclick="alert('تم تسجيل الدخول')">تسجيل الدخول</button>
+  </section>
 
-  <div class="section">
-    <h2>عن الموقع</h2>
-    <p>موقع إلكتروني مغربي مجاني مخصص لبيع وشراء الطيور والدواجن والبيض بجميع أنواعه. يمكنك نشر إعلانك بسهولة والتواصل مع المهتمين مباشرة.</p>
-  </div>
+  <nav>
+    <button>الكل</button>
+    <button>دجاج بلدي</button>
+    <button>دجاج رومي</button>
+    <button>بياض</button>
+    <button>أرانب</button>
+    <button>حمام</button>
+    <button>كناري</button>
+  </nav>
+
+  <section class="ads">
+    <div class="ad">
+      <h3>دجاج بلدي للبيع</h3>
+      <p>السن: 3 أشهر</p>
+      <p>الثمن: 120 درهم</p>
+      <button>تواصل مع البائع</button>
+    </div>
+    <div class="ad">
+      <h3>بيض للتفريخ</h3>
+      <p>30 بيضة طازجة</p>
+      <p>السعر: 90 درهم</p>
+      <button>تواصل مع البائع</button>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 طيور المغرب. جميع الحقوق محفوظة.
+    <p>&copy; 2025 طيور المغرب - جميع الحقوق محفوظة</p>
   </footer>
-
 </body>
 </html>
